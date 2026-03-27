@@ -75,7 +75,7 @@
 
         /* navigation */
         header {
-            padding: 1.5rem 5%;
+            padding: 0.5rem 5%;
             display: flex;
             justify-content: flex-start; 
             align-items: center;
@@ -96,6 +96,24 @@
             text-shadow: 0 0 10px var(--nebula-cyan);
             text-decoration: none;
             letter-spacing: 2px;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-link img {
+            height: 50px;
+            width: auto;
+            mix-blend-mode: screen;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .logo-link:hover img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.6)) brightness(1.2);
         }
 
         nav {
@@ -390,9 +408,10 @@
     <div class="nebula-layers"></div>
 
     <header>
-        <a href="#" class="logo">ASTRA LESSON</a>
+        <a href="#" class="logo-link"><img src="logo_astra_lesson_no_text.png"></a>
+        
         <nav>
-            <a href="#hero">Home</a>
+            <a href="#hero">Beranda</a>
             <a href="#syllabus">Modul Materi</a>
         </nav>
     </header>
@@ -407,6 +426,7 @@
             </div>
 
             <div class="hero-action-container">
+                <img src="logo_astra_lesson-removebg-preview.png">
                 <a href="#syllabus" class="hero-btn-main">Start Exploring</a>
                 
                 <div class="hero-btn-row">
@@ -534,7 +554,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Astra Lesson. Dedicated to the stars and the minds that seek them.</p>
+        <p>&copy; | 2026 Astra Lesson | Wijdan Razefi Al Hawwari | Dedicated to the stars and the minds that seek them |</p>
     </footer>
 
 </body>
