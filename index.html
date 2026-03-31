@@ -15,7 +15,6 @@
             --nebula-purple: #9e45f1;
             --glass-bg: rgba(11, 19, 43, 0.3);
             --glass-border: rgba(0, 240, 255, 0.15);
-            
             --diff-beginner: #39ff14; 
             --diff-intermediate: #ffd700; 
             --diff-advanced: #ff3131; 
@@ -37,7 +36,6 @@
             min-height: 100vh;
         }
 
-        /* space background */
         .stars-fine {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -3;
             background-image: 
@@ -73,9 +71,8 @@
             filter: blur(30px);
         }
 
-        /* navigation */
         header {
-            padding: 0.5rem 5%;
+            padding: 1.5rem 5%;
             display: flex;
             justify-content: flex-start; 
             align-items: center;
@@ -88,16 +85,6 @@
             gap: 3rem; 
         }
 
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--nebula-cyan);
-            text-shadow: 0 0 10px var(--nebula-cyan);
-            text-decoration: none;
-            letter-spacing: 2px;
-        }
-
         .logo-link {
             display: flex;
             align-items: center;
@@ -105,7 +92,7 @@
         }
 
         .logo-link img {
-            height: 50px;
+            height: 45px;
             width: auto;
             mix-blend-mode: screen;
             transition: transform 0.3s ease, filter 0.3s ease;
@@ -136,7 +123,6 @@
             text-shadow: 0 0 8px var(--nebula-cyan);
         }
 
-        /* hero */
         .hero {
             min-height: 90vh;
             display: flex;
@@ -190,7 +176,6 @@
             gap: 1.5rem;
         }
 
-        /* main button */
         .hero-btn-main {
             display: inline-block;
             background: linear-gradient(45deg, var(--nebula-purple), var(--nebula-cyan));
@@ -212,7 +197,6 @@
             box-shadow: 0 0 30px rgba(0, 240, 255, 0.6);
         }
 
-        /* secondary button */
         .hero-btn-row {
             display: flex;
             gap: 1rem;
@@ -245,7 +229,6 @@
             50% { transform: translateY(-8px); }
         }
 
-        /* modul materi */
         .syllabus {
             padding: 5rem 5%;
         }
@@ -269,7 +252,6 @@
             margin: 0 auto;
         }
 
-        /* card */
         .course-card {
             background: var(--glass-bg);
             backdrop-filter: blur(15px);
@@ -368,13 +350,84 @@
         .diff-intermediate { color: var(--diff-intermediate); border: 1px solid var(--diff-intermediate); background: rgba(255, 215, 0, 0.05); }
         .diff-advanced { color: var(--diff-advanced); border: 1px solid var(--diff-advanced); background: rgba(255, 49, 49, 0.05); }
 
-        /* footer */
+        .premium-section {
+            padding: 5rem 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 18px;
+            padding: 3rem;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .login-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            color: var(--nebula-cyan);
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            text-align: left;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .input-group label {
+            color: var(--starlight);
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .input-group input {
+            background: rgba(11, 19, 43, 0.5);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            padding: 0.8rem;
+            color: #fff;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.1rem;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: var(--nebula-cyan);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+        }
+
+        .login-btn {
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
         footer {
             text-align: center;
             padding: 3rem 5%;
             background: rgba(3, 6, 14, 0.95);
             border-top: 1px solid var(--glass-border);
-            margin-top: 5rem;
+            margin-top: 2rem;
         }
 
         footer p {
@@ -383,7 +436,6 @@
             letter-spacing: 1px;
         }
 
-        /* responsiveness */
         @media (max-width: 992px) {
             .hero { flex-direction: column; text-align: center; gap: 3rem; padding: 4rem 5%; }
             .hero-text-container { text-align: center; align-items: center; }
@@ -395,7 +447,7 @@
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 1rem; padding: 1rem; }
             nav { gap: 1rem; flex-wrap: wrap; justify-content: center; }
-            .logo { font-size: 1.5rem; }
+            .logo-link img { height: 35px; }
             .hero-btn-row { flex-direction: column; width: 100%; gap: 0.8rem; }
             .btn-secondary { width: 100%; text-align: center; }
         }
@@ -408,11 +460,12 @@
     <div class="nebula-layers"></div>
 
     <header>
-        <a href="#" class="logo-link"><img src="logo_astra_lesson_no_text.png"></a>
+        <a href="#" class="logo-link"><img src="logo_astra_lesson_no_text.png" alt="Logo"></a>
         
         <nav>
             <a href="#hero">Beranda</a>
             <a href="#syllabus">Modul Materi</a>
+            <a href="#pricing">Akses Premium</a>
         </nav>
     </header>
 
@@ -426,7 +479,6 @@
             </div>
 
             <div class="hero-action-container">
-                <img src="logo_astra_lesson-removebg-preview.png">
                 <a href="#syllabus" class="hero-btn-main">Start Exploring</a>
                 
                 <div class="hero-btn-row">
@@ -549,8 +601,26 @@
                     </div>
                 </div>
 
-                </div>
+            </div>
         </section>
+
+        <section id="pricing" class="premium-section">
+            <div class="login-container">
+                <h2 class="login-title">Akses Premium</h2>
+                <form class="login-form">
+                    <div class="input-group">
+                        <label for="username">Username / Email</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="hero-btn-main login-btn">Login</button>
+                </form>
+            </div>
+        </section>
+
     </main>
 
     <footer>
